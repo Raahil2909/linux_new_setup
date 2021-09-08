@@ -1,0 +1,22 @@
+[Desktop Entry]
+DefaultProfile=Profile 5.profile
+
+[DownloadDialog Settings]
+Height 768=433
+Width 1366=700
+
+[Favorite Profiles]
+Favorites=
+
+[KonsoleWindow]
+ShowMenuBarByDefault=false
+
+[MainWindow]
+Height 768=704
+MenuBar=Disabled
+State=AAAA/wAAAAD9AAAAAAAAAqsAAALlAAAABAAAAAQAAAAIAAAACPwAAAAA
+ToolBarsMovable=Disabled
+Width 1366=683
+
+[TabBar]
+CloseTabButton=None
