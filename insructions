@@ -1,0 +1,8 @@
+to swap caps and escape - 
+cd /etc/default
+then change keyboard file with
+XKBOPTIONS=""
+to
+XKBOPTIONS="caps:swapescape"
+then reboot
+or simply replace the keyboard file with the one here:
