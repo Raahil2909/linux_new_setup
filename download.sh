@@ -8,6 +8,7 @@ apt upgrade
 apt install git # version control
 apt install tmux # terminal control
 apt install xclip # cli tool for copy to clipboard
+apt install ctags # superb to jump to definiations back n forth
 
 ################################################################
 ########################## editors #############################
@@ -29,7 +30,7 @@ apt-get install sublime-text
 apt install konsole terminator guake
 
 ################################################################
-############################ browsers ##########################
+######################### browsers #############################
 ## brave
 apt install apt-transport-https curl
 curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
@@ -37,17 +38,17 @@ echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=
 apt update
 apt install brave-browser
 
-## chrome
-## download that with gui from firefox
-## then run dpkg -i file_name_for_chrome_download
-
 ################################################################
-########################### pdf viewer #########################
+######################## pdf viewer ############################
 apt install zathura
 
 ################################################################
-########################### screenshot #########################
+######################## screenshot ############################
 apt install flameshot
+
+################################################################
+########################### mail ###############################
+apt install thunderbird
 
 ################################################################
 ##################### download from brwoser ####################
