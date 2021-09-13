@@ -2,8 +2,8 @@ syntax on
 
 set nohlsearch
 set belloff=all
-set tabstop=4 softtabstop=4
-set shiftwidth=4
+set tabstop=2 softtabstop=2
+set shiftwidth=2
 set expandtab
 set smartindent
 set backspace=indent,eol,start
@@ -19,7 +19,7 @@ set wildmenu
 set path+=**
 set signcolumn=yes
 set showtabline=2
-set cursorline
+" set cursorline
 
 call plug#begin('~/.config/nvim/plugged')
 Plug 'markonm/traces.vim'
@@ -47,6 +47,7 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc()==0 && !exists('s:std_in')|NERDTree|endif
 nnoremap ,n :NERDTree<CR>
 let NERDTreeShowHidden=1
+let g:NERDTreeWinSize=18
 
 " alias
 cnoreabbrev Wq :wq
