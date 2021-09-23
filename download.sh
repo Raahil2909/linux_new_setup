@@ -9,6 +9,7 @@ apt install git # version control
 apt install tmux # terminal control
 apt install xclip # cli tool for copy to clipboard
 apt install ctags # superb to jump to definiations back n forth
+apt instal fzf # fuzzy searcher.
 
 ################################################################
 ########################## editors #############################
