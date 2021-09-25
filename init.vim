@@ -2,35 +2,50 @@ syntax on
 
 set belloff=all
 set tabstop=2 softtabstop=2
-set shiftwidth=2
-set expandtab
+set shiftwidth=2 " > key 2 tabs
+set expandtab " convert tab to spaces
 set smartindent
 set backspace=indent,eol,start
 set number relativenumber
-set smartcase
-set incsearch
-set exrc
+set smartcase " case insensitive search until we enter a capital letter
+set incsearch " while we search we get results simlutaneously
+set exrc " source vimrc in cur folder
 set noswapfile
 set nobackup
 set undodir=~/.config/nvim/undodir
 set undofile
 set wildmenu
 set path+=**
-" set signcolumn=yes
+set scrolloff=8
+set signcolumn=yes
 " set showtabline=2
 " set cursorline
 
 call plug#begin('~/.config/nvim/plugged')
+Plug 'joshdick/onedark.vim'
+Plug 'tomasr/molokai'
+Plug 'ycm-core/YouCompleteMe'
 Plug 'markonm/traces.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'preservim/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'mbbill/undotree'
 " Plug 'vim-scripts/vim-signify'
 call plug#end()
 
-map ,s :source ~/.config/nvim/init.vim<CR><CR>
-map ,p :PlugInstall<CR><CR>
+nnoremap ,s :source ~/.config/nvim/init.vim<CR><CR>
+nnoremap ,p :PlugInstall<CR><CR>
+nnoremap ,u :UndotreeShow<CR>
+
+" color scheme
+" autocmd ColorScheme * highlight Normal ctermbg=NONE guibg=NONE
+colorscheme onedark
+
+" ycm shorcuts
+nnoremap ,gd :YcmCompleter GoTo<CR> " ctrl+o to go back
+set completeopt-=preview
+let g:ycm_autoclose_preview_window_after_completion=1
 
 " navigating in splits
 nnoremap <C-h> <C-W>h
