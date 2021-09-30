@@ -1,8 +1,8 @@
 syntax on
 
 set belloff=all
-set tabstop=2 softtabstop=2
-set shiftwidth=2 " > key 2 tabs
+set tabstop=4 softtabstop=4
+set shiftwidth=4 " > key 2 tabs
 set expandtab " convert tab to spaces
 set smartindent
 set backspace=indent,eol,start
@@ -16,15 +16,21 @@ set undodir=~/.config/nvim/undodir
 set undofile
 set wildmenu
 set path+=**
-set scrolloff=8
+" set scrolloff=8
 set signcolumn=yes
 " set showtabline=2
 " set cursorline
+set splitright
+set splitbelow
+
+let mapleader = ' '
+
 
 call plug#begin('~/.config/nvim/plugged')
 Plug 'joshdick/onedark.vim'
 Plug 'tomasr/molokai'
 Plug 'ycm-core/YouCompleteMe'
+Plug 'rdnetto/YCM-Generator', {'branch':'stable'}
 Plug 'markonm/traces.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'preservim/nerdtree'
@@ -46,6 +52,16 @@ colorscheme onedark
 nnoremap ,gd :YcmCompleter GoTo<CR> " ctrl+o to go back
 set completeopt-=preview
 let g:ycm_autoclose_preview_window_after_completion=1
+let g:ycm_collect_identifiers_from_tags_files=1
+let g:ycm_show_diagnostics_ui = 0
+let g:ycm_global_ycm_extra_conf='/home/raahil/.ycm_extra_conf.py'
+
+
+" airline
+let g:airline#extensions#tabline#enabled=1
+let g:airline#extensions#tabline#fnameod = ':t'
+let g:airline_powerline_fonts = 1
+
 
 " navigating in splits
 nnoremap <C-h> <C-W>h
@@ -71,3 +87,4 @@ let g:NERDTreeWinSize=18
 cnoreabbrev Wq :wq
 cnoreabbrev W :w
 cnoreabbrev Q :q
+cnoreabbrev WQ :wq

@@ -56,6 +56,14 @@ snap install vlc
 apt install thunderbird
 
 ################################################################
+########################### mail ###############################
+git clone git@github.com:powerline/fonts.git
+cd fonts
+./install.sh
+# then go and change the fonts and get nice symbols on your terminal
+
+
+################################################################
 ##################### download from brwoser ####################
 # vscode, chrome, teams
 # then run dpkg -i file_name to install
