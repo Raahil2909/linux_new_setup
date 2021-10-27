@@ -22,30 +22,38 @@ set signcolumn=yes
 " set cursorline
 set splitright
 set splitbelow
+set foldmethod=syntax
 
 let mapleader = ' '
 
 
 call plug#begin('~/.config/nvim/plugged')
+Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
 Plug 'joshdick/onedark.vim'
 Plug 'tomasr/molokai'
 Plug 'ycm-core/YouCompleteMe'
-Plug 'rdnetto/YCM-Generator', {'branch':'stable'}
 Plug 'markonm/traces.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'preservim/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'mbbill/undotree'
-" Plug 'vim-scripts/vim-signify'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope-fzy-native.nvim'
+Plug 'neovim/nvim-lspconfig'
+Plug 'mattn/emmet-vim'
 call plug#end()
 
 nnoremap ,s :source ~/.config/nvim/init.vim<CR><CR>
 nnoremap ,p :PlugInstall<CR><CR>
 nnoremap ,u :UndotreeShow<CR>
+nnoremap ,t :Telescope<CR>
+nnoremap ,ct :!ctags -R .<CR><CR>
 
 " color scheme
-" autocmd ColorScheme * highlight Normal ctermbg=NONE guibg=NONE
+" autocmd ColorScheme * highlight Normal ctermbg=000000CC guibg=NONE
 colorscheme onedark
 
 " ycm shorcuts
@@ -54,7 +62,7 @@ set completeopt-=preview
 let g:ycm_autoclose_preview_window_after_completion=1
 let g:ycm_collect_identifiers_from_tags_files=1
 let g:ycm_show_diagnostics_ui = 0
-let g:ycm_global_ycm_extra_conf='/home/raahil/.ycm_extra_conf.py'
+" let g:ycm_global_ycm_extra_conf='/home/raahil/.ycm_extra_conf.py'
 
 
 " airline
@@ -88,3 +96,18 @@ cnoreabbrev Wq :wq
 cnoreabbrev W :w
 cnoreabbrev Q :q
 cnoreabbrev WQ :wq
+
+" js beautify
+nnoremap ,bj :!js-beautify -r %<CR>
+
+" emmet 
+let g:user_emmet_leader_key='<M-e>'
+
+" code folding key binds till the time i remeber them
+" zo - open a fold at cursor
+" zO - open all folds at cursor
+" zc - close a fold at cursor
+" zm - increase fold level by 1
+" zM - closes all open folds
+" zr - decrease foldlevel by 1
+" zR - open all folds

@@ -144,3 +144,5 @@ ex(){
     fi
 }
 . "$HOME/.cargo/env"
+export PATH=$PATH:/usr/local/go/bin
+complete -C /usr/local/bin/bit bit
