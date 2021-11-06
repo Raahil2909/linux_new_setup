@@ -102,6 +102,7 @@ nnoremap ,bj :!js-beautify -r %<CR>
 
 " emmet 
 let g:user_emmet_leader_key='<M-e>'
+" emmet_leader+, to use emmet
 
 " code folding key binds till the time i remeber them
 " zo - open a fold at cursor
