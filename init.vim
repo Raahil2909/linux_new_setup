@@ -51,7 +51,7 @@ nnoremap ,p :PlugInstall<CR><CR>
 nnoremap ,u :UndotreeShow<CR>
 nnoremap ,t :Telescope<CR>
 nnoremap ,ct :!ctags -R .<CR><CR>
-
+nnoremap ,x :bn<CR>
 " color scheme
 " autocmd ColorScheme * highlight Normal ctermbg=000000CC guibg=NONE
 colorscheme onedark
