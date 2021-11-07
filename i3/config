@@ -206,7 +206,7 @@ bindsym $mod+Print exec flameshot
 
 # borders
 default_border pixel 2
-gaps outer 11
+gaps outer 3
 gaps inner 3
 
 # opacity
