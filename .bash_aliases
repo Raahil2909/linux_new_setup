@@ -17,3 +17,4 @@ alias ydl='youtube-dl'
 CNG_PATH='/home/raahil/courses/sem5/iot/grp_proj/contiki-ng'
 alias contiker="sudo docker run --privileged --sysctl net.ipv6.conf.all.disable_ipv6=0 --mount type=bind,source=$CNG_PATH,destination=/home/user/contiki-ng -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v /dev/bus/usb:/dev/bus/usb -ti contiker/contiki-ng"
 alias conti="sudo docker start --privileged --sysctl net.ipv6.conf.all.disable_ipv6=0 --mount type=bind,source=$CNG_PATH,destination=/home/user/contiki-ng -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v /dev/bus/usb:/dev/bus/usb -ti contiker/contiki-ng"
+alias bettercap="sudo docker -it --privileged --net=host bettercap/bettercap"

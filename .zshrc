@@ -109,5 +109,3 @@ export PATH=$PATH:/home/raahil/.local/bin
 export PYTHONPATH=$PYTHONPATH:/home/raahil/courses/sem5/network/ns-allinone-3.35/bake
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/bit bit
-
-feh --bg-scale ~/pics/wp1.jpg 

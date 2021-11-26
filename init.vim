@@ -54,7 +54,7 @@ nnoremap ,ct :!ctags -R .<CR><CR>
 nnoremap ,x :bn<CR>
 " color scheme
 " autocmd ColorScheme * highlight Normal ctermbg=000000CC guibg=NONE
-colorscheme onedark
+" colorscheme onedark
 
 " ycm shorcuts
 nnoremap ,gd :YcmCompleter GoTo<CR> " ctrl+o to go back
@@ -81,8 +81,8 @@ nnoremap <C-l> <C-W>l
 noremap <C-Left> :vertical resize -5<CR> 
 noremap <C-Right> :vertical resize +5<CR>
 " move visually selected text up and down 
-xnoremap K :move '<-2<CR>gv-gv
-xnoremap J :move '>+1<CR>gv-gv
+xnoremap <M-k> :move '<-2<CR>gv-gv
+xnoremap <M-j> :move '>+1<CR>gv-gv
 
 " nerd tree shorcuts to open it when no file name is given
 autocmd StdinReadPre * let s:std_in=1
